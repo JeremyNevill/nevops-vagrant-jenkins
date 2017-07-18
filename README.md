@@ -18,7 +18,6 @@ sudo pip install ansible
 ### 2) Install [Ansible Galaxy](https://galaxy.ansible.com) Roles
 ```
 ansible-galaxy install geerlingguy.git -p ./roles/
-ansible-galaxy install geerlingguy.java -p ./roles/
 ansible-galaxy install geerlingguy.jenkins -p ./roles/
 ```
 
@@ -26,4 +25,20 @@ ansible-galaxy install geerlingguy.jenkins -p ./roles/
 Start the brand new vagrant centos box from the terminal with:
 ```
 vagrant up
+```
+
+---
+
+## Notes
+
+To ssh onto the new vm use:
+```
+vagrant ssh
+```
+un: vagrant 
+pw: vagrant
+
+The vagrant up automatically runs the playbook agains the virtual machine, to manually run the playbook setup ssh auth then:
+```
+ansible-playbook jenkins-server.yml -i hosts
 ```
