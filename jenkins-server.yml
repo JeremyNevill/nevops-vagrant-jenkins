@@ -1,0 +1,8 @@
+---
+- name: Config Jenkins CI Server
+  hosts: default
+  sudo: True
+  roles:
+    - geerlingguy.git
+    - geerlingguy.java
+    - geerlingguy.jenkins
