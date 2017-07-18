@@ -15,3 +15,15 @@ sudo easy_install pip
 sudo pip install ansible
 ```
 
+### 2) Install [Ansible Galaxy](https://galaxy.ansible.com) Roles
+```
+ansible-galaxy install geerlingguy.git -p ./roles/
+ansible-galaxy install geerlingguy.java -p ./roles/
+ansible-galaxy install geerlingguy.jenkins -p ./roles/
+```
+
+### 3) Vagrant Up
+Start the brand new vagrant centos box from the terminal with:
+```
+vagrant up
+```
