@@ -17,7 +17,6 @@ sudo pip install ansible
 
 ### 2) Install [Ansible Galaxy](https://galaxy.ansible.com) Roles
 ```
-ansible-galaxy install geerlingguy.git -p ./roles/
 ansible-galaxy install geerlingguy.java -p ./roles/
 ansible-galaxy install geerlingguy.jenkins -p ./roles/
 ```
