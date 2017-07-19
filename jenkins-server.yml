@@ -2,7 +2,13 @@
 - name: Config Jenkins CI Server
   hosts: default
   sudo: True
+  vars:
+    jenkins_hostname: 127.0.0.1
   roles:
-    - geerlingguy.git
-    - geerlingguy.java
-    - geerlingguy.jenkins
+    - role: geerlingguy.java
+      when: "ansible_os_family == 'RedHat'"
+      java_packages:
+        - java-1.8.0-openjdk
+    - role: geerlingguy.jenkins
+    
+

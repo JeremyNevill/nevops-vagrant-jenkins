@@ -18,6 +18,7 @@ sudo pip install ansible
 ### 2) Install [Ansible Galaxy](https://galaxy.ansible.com) Roles
 ```
 ansible-galaxy install geerlingguy.git -p ./roles/
+ansible-galaxy install geerlingguy.java -p ./roles/
 ansible-galaxy install geerlingguy.jenkins -p ./roles/
 ```
 
@@ -26,6 +27,10 @@ Start the brand new vagrant centos box from the terminal with:
 ```
 vagrant up
 ```
+
+Once the machine creation, install of java then Jenkins has finished browse to:
+
+#### [localhost:8080](http://localhost:8080)
 
 ---
 
@@ -42,3 +47,7 @@ The vagrant up automatically runs the playbook agains the virtual machine, to ma
 ```
 ansible-playbook jenkins-server.yml -i hosts
 ```
+
+---
+
+Copyright (c) 2017 Jeremy Nevill
